@@ -53,3 +53,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = lightbox.querySelector("img");
+const closeBtn = lightbox.querySelector(".close-lightbox");
+
+document.querySelectorAll(".lightbox-link").forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    lightboxImg.src = link.href;
+    lightbox.style.display = "flex";
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  lightbox.style.display = "none";
+  lightboxImg.src = "";
+});
+
+lightbox.addEventListener("click", e => {
+  if (e.target === lightbox) {
+    lightbox.style.display = "none";
+    lightboxImg.src = "";
+  }
+});
