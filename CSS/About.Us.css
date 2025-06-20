@@ -1,0 +1,191 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Finger Paint", sans-serif;
+    color: white;
+    background-image: url(../images/20220912_074350_copy_1200x858_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.header-nav {
+    background-color: rgba(73, 69, 69, 0.6);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-nav h1 {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 10px;
+    flex-grow: 1;
+    justify-content: center;
+    text-align: center;
+}
+
+.header-nav img {
+    width: 70px;
+    height: 70px;
+}
+
+/* Navigation Links */
+.nav-info {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-info a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-info a:hover {
+    color: #ccc;
+}
+
+/* Card Section */
+.card {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 2rem auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.card h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 2rem;
+    color: #f0f0f0;
+    text-align: justify;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 450px;
+  margin: auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.slide {
+  display: none;
+  text-align: center;
+}
+
+.slide.active {
+  display: block;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 12px;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  font-size: 18px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+
+/* Footer */
+.card-footer {
+    background-color: rgba(0, 0, 0, 0.534);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 0.75rem;
+    margin-top: 50px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.card-footer a {
+    color: rgb(233, 218, 218);
+    font-family: "Finger Paint", sans-serif;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.card-footer img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-info {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    .header-nav h1 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .card h1 {
+        font-size: 1.5rem;
+    }
+
+    .card p {
+        font-size: 0.95rem;
+    }
+
+    footer h1,
+    footer a,
+    footer p {
+        font-size: 0.85rem;
+    }
+
+    footer a img {
+        width: 25px;
+        height: 25px;
+    }
+}

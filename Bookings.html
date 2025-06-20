@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Are you an artist or musician? Apply to showcase your talent at Exhibit_A. Fill out our easy booking form to get started.">
+    <title>Artist Booking | Exhibit_A Venue Application</title>
+    <link rel="stylesheet" href="CSS/Bookings.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--to change the font of the website-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!--NavBar-->
+    <nav class="header-nav">
+        <img src="images/BL.jpeg">
+        <h1>Exhibit_A</h1>
+        <div style="float: right;">
+            <a href="index.html">
+                Home.Page
+            </a>
+            <a href="About.Us.html">
+                About.Us
+            </a>
+            <a href="Events.html">
+                Events
+            </a>
+            <a href="Tickets.Page.html">
+                Ticket.Page
+            </a>
+        </div>
+    </nav>
+    <!--Booking site-->
+    <!-- Progress bar -->
+    <div class="progressbar">
+        <div class="progress-step progress-step-active" data-title="1"></div>
+        <div class="progress-step" data-title="2"></div>
+        <div class="progress-step" data-title="3"></div>
+    </div>
+
+    <!-- Multi-step form starts -->
+    <form id="form">
+        <div class="form-step form-step-active">
+            <!-- Artist/Musician Info -->
+            <div class="divs-container">
+                <div class="card">
+                    <!-- ... existing artist fields ... -->
+                    <label>First Name*: <input type="text" name="firstName" required></label>
+                    <label>Surname*: <input type="text" name="surname" required></label>
+                    <label>E-mail*: <input type="email" name="email" required></label>
+                    <label>Contact no*: <input type="tel" name="contact" required></label>
+                    <label>Stage name: <input type="text" name="stageName"></label>
+                    <label>Instagram Handle: <input type="text" name="instagram"></label>
+                    <label>Facebook Handle: <input type="text" name="facebook"></label>
+                    <p>NOTE: A portfolio is required for the gallery to view the musician/artist.</p>
+                </div>
+            </div>
+            <div class="btns-group">
+                <button type="button" class="btn-next">Next</button>
+            </div>
+        </div>
+
+        <div class="form-step">
+            <!-- Manager & Show Info -->
+            <div class="divs-container">
+                <div class="card">
+                    <!-- ... existing manager & show fields ... -->
+                    <label>Manager Name*: <input type="text" name="managerName" required></label>
+                    <label>Surname*: <input type="text" name="managerSurname" required></label>
+                    <label>E-mail*: <input type="email" name="managerEmail" required></label>
+                    <label>Contact no*: <input type="tel" name="managerContact" required></label>
+                    <label>Show date: <input type="date" name="showDate" required></label>
+                    <label for="startTime">Show Starts</label>
+                    <input id="startTime" type="time" name="TIME-Start">
+
+                    <label for="endTime">Show Ends</label>
+                    <input id="endTime" type="time" name="TIME-End">
+                </div>
+            </div>
+            <div class="btns-group">
+                <button type="button" class="btn-prev">Previous</button>
+                <button type="button" class="btn-next">Next</button>
+            </div>
+        </div>
+
+        <div class="form-step">
+            <div class="divs-container">
+                <div class="card"> 
+                    <h2>Confirm Booking</h2>
+                    <p>Your booking has been confirmed.<br>To review your information click BOOK</p>
+                    <!-- Optionally preview data here -->
+                </div>
+            </div>
+            <div class="btns-group">
+                <button type="button" class="btn-prev">Previous</button>
+                <input type="submit" value="Book">
+            </div>
+        </div>
+    </form>
+
+    <!--The footer-->
+    <div>
+        <footer class="card-footer">
+            <!--Contact details-->
+            <h1>Contact Details</h1>
+            <h2>Contact no: +27 12 345 6789</h2>
+            <h2>Email: Exhibit_A@gmail.com</h2>
+            <h2>Adress: Cnr Smith and Queen Streets, Jonah Park,Johannesburg South
+                Africa</h2>
+            <!--Socail media links-->
+            <h2>Social Media Handles<br>
+                <a href="https://www.instagram.com/"><img src="images/insta-logo.jpeg">@Exhibit_A</a>
+                <a href="https://x.com/?lang=en-ie"><img src="images/twitter-logo.png"> @Exhibit_A</a>
+                <a href="https://www.facebook.com/"><img src="images/facebook-logo.jpg"> @Exhibit_A</a>
+            </h2>
+            <h2 style="text-align: center;">&copy;Copyright - 2025 -Exhibit_A</h2>
+        </footer>
+    </div>
+
+    </div>
+</body>
+<script src="../Part_1/JAVAscript/booking.js"></script>
+<script>
+    const myform = document.getElementById('form');
+    myform.addEventListener("submit", function (event) {
+        let formData = new FormData(this);
+        let text = '';
+        for (let [key, value] of formData.entries()) {
+            text += (`${key}: ${value}\n`);
+        }
+        alert(text);
+    });
+</script>
+
+
+</html>

@@ -1,0 +1,174 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Finger Paint", sans-serif;
+    min-height: 100vh;
+    background-image: url(../images/20220912_074350_copy_1200x858_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+.finger-paint-regular {
+    
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+/* Navbar */
+.header-nav {
+    background-color: rgba(73, 69, 69, 0.6);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-nav img {
+    height: 70px;
+    width: 70px;
+}
+
+.header-nav h1 {
+    font-size: 2rem;
+    font-family: "Finger Paint", sans-serif;
+    flex-grow: 1;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.nav-info {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-info a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-info a:hover {
+    color: #ddd;
+}
+
+/* Main Content */
+.container {
+    background-color: rgba(0, 0, 0, 0.493);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container > div > h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 3px 3px 3px white;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    text-decoration: dotted;
+}
+
+.card p {
+    font-size: 2rem;
+    line-height: 1.6;
+    flex: 1 1 60%;
+    color: #f0f0f0;
+}
+
+.card img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    flex: 1 1 30%;
+}
+
+/* Footer */
+.card-footer {
+    background-color: rgba(0, 0, 0, 0.534);
+    color: white;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    padding: 30px 15px;
+    font-size: 0.75rem;
+    margin-top: 50px;
+}
+
+.card-footer a {
+    color: rgb(233, 218, 218);
+    font-family: "Finger Paint", sans-serif;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.card-footer img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-nav h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card img {
+        margin: 0 auto;
+    }
+
+    .container > div > h1 {
+        font-size: 2rem;
+    }
+}

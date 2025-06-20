@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Secure your spot at upcoming Exhibit_A events. Browse ticket prices, event dates, and book online for art exhibitions and live music.">
+    <title>Book Tickets Online | Exhibit_A Art & Music Shows</title>
+    
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="CSS/Ticket.css">
+
+    <!-- Google Fonts for styling -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Noto+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="header-nav">
+        <img src="../Part_1/images/BL.jpeg" alt="Logo">
+        <h1>Exhibit_A</h1>
+        <div style="float: right">
+            <a href="index.html">Home.Page</a>
+            <a href="About.Us.html">About.Us</a>
+            <a href="Events.html">Events</a>
+            <a href="Bookings.html">Booking.Site</a>
+        </div>
+    </nav>
+
+    <!-- Booking form -->
+    <form onsubmit="event.preventDefault(); openPopup();">
+        <div class="divs-container">
+            <div class="card">
+                <h1>Ticket Form</h1>
+                
+                <label for="firstName">First Name*</label>
+                <input id="firstName" type="text" name="First.Name" placeholder="Enter Name" required>
+
+                <label for="surname">Surname*</label>
+                <input id="surname" type="text" name="Surname" placeholder="Enter Surname" required>
+
+                <label for="showName">Name of Show</label>
+                <input id="showName" type="text" name="Show.Name" placeholder="Art/Music Show" required>
+
+                <label for="email">E-mail*</label>
+                <input id="email" type="email" name="Email" placeholder="e.g email@gmail.com" required>
+
+                <label for="contactNo">Contact no*</label>
+                <input id="contactNo" type="tel" name="Contact.no" placeholder="e.g +27 12 345 6789" required>
+
+                <label for="date">Show date</label>
+                <input id="date" type="date" name="DATE">
+
+                <label for="startTime">Show Starts</label>
+                <input id="startTime" type="time" name="TIME-Start">
+
+                <label for="endTime">Show Ends</label>
+                <input id="endTime" type="time" name="TIME-End">
+            </div>
+        </div>
+
+        <!-- Confirmation button -->
+        <div class="container">
+            <button type="submit" class="btn">Confirm</button>
+            <div class="popup" id="popup">
+                <img src="../Part_1/images/check-512.webp" alt="confirmation tag">
+                <h2>Thank you!</h2>
+                <p>Your ticket details have been confirmed <br>and will be sent to your email.</p>
+                <button type="button" onclick="closePopup()">OK</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Footer with contact details -->
+    <footer class="card-footer">
+        <h1>Contact Details</h1>
+        <h2>Contact no: +27 12 345 6789</h2>
+        <h2>Email: Exhibit_A@gmail.com</h2>
+        <h2>Address: Cnr Smith and Queen Streets, Jonah Park, Johannesburg, South Africa</h2>
+
+        <!-- Social Media -->
+        <h2>Social Media Handles<br>
+            <a href="https://www.instagram.com/"><img src="images/insta-logo.jpeg" alt="Instagram">@Exhibit_A</a>
+            <a href="https://x.com/?lang=en-ie"><img src="images/twitter-logo.png" alt="Twitter">@Exhibit_A</a>
+            <a href="https://www.facebook.com/"><img src="images/facebook-logo.jpg" alt="Facebook">@Exhibit_A</a>
+        </h2>
+        <h2 style="text-align: center;">&copy;Copyright - 2025 - Exhibit_A</h2>
+    </footer>
+
+    <!-- Link external JS -->
+<script src="../Part_1/JAVAscript/Ticket.js"></script>
+</body>
+</html>
+
+</body>
+</html>
